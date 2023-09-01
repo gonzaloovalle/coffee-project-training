@@ -39,6 +39,7 @@ const createCoffee = (e) => {
     }
 
     coffees.push(newCoffee);
+    localStorage.setItem('coffees', JSON.stringify(coffees)); // save the coffees array into localStorage
     updateCoffees(e);
 }
 
@@ -67,8 +68,15 @@ let search = document.querySelector("#search");
 let newRoastSelection = document.querySelector("#new-roast-selection");
 let newCoffeeName = document.querySelector("#add-coffee");
 
-coffeeDiv.innerHTML = renderCoffees(coffees);
-
 search.addEventListener('keyup', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
 submitButton.addEventListener("click", createCoffee);
+
+// Load coffees array from localStorage when the page is loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+    let storedCoffees = localStorage.getItem('coffees');
+    if (storedCoffees) {
+        coffees = JSON.parse(storedCoffees); // convert the string back to array
+    }
+    coffeeDiv.innerHTML = renderCoffees(coffees);
+});
