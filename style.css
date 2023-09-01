@@ -1,9 +1,54 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+body {
+    text-align: center;
+    background-color: #D2B48C;  /* tan color */
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Sansita Swashed, serif;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+.coffee h2 {
+    color: #8B4513;  /* dark brown color */
+    font-size: 24px;
+}
+
+.coffee p {
+    color: #8B4513;  /* dark brown color */
+    font-size: 16px;
+}
+
+form {
+    background-color: #D2B48C;  /* tan color */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form label {
+    color: #8B4513;  /* dark brown color */
+    font-size: 16px;
+}
+
+form select, form input {
+    color: #8B4513;  /* dark brown color */
+    font-size: 14px;
+    border: 1px solid #8B4513;  /* dark brown color */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#submit {
+    color: white;
+    background-color: #8B4513;  /* dark brown color */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.coffee {
+    padding: 1.7em;
+}
+
+#coffee-container {
+    height: 60vh;
 }

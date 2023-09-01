@@ -2,40 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Coffee!</h1>
+        <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection">Roast</label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="search">Coffee Name</label>
-        <input id="search" type="text" />
-    </form>
+        <form>
+            <label for="roast-selection">Roast</label>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="search">Coffee Name</label>
+            <input id="search" type="text" />
+        </form>
 
 
-    <h1>Add a coffee!</h1>
-    <form>
-        <label for="new-roast-selection">Roast</label>
-        <select id="new-roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <label for="add-coffee">Coffee Name</label>
-        <input id="add-coffee" type="text" />
-        <button type="submit" id="submit">Submit</button>
-    </form>
+        <h1>Add a coffee!</h1>
+        <form>
+            <label for="new-roast-selection">Roast</label>
+            <select id="new-roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <label for="add-coffee">Coffee Name</label>
+            <input id="add-coffee" type="text" />
+            <button type="submit" id="submit">Submit</button>
+        </form>
 
-        <div id="coffees"></div>
+        <div id="coffee-container" class="d-flex flex-direction-column">
+            <div id="coffees" class="d-flex flex-wrap justify-content-evenly col-10 m-auto align-items-center"></div>
+        </div>
+
 
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
